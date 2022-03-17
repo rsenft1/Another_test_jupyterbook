@@ -1,4 +1,0 @@
-format: jb-book
-root: docs/test_page
-chapters:
-- file: docs/glue

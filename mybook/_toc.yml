@@ -1,0 +1,5 @@
+format: jb-book
+root: docs/How to make a google doc into a JupyterBook
+chapters: 
+- file: docs/Example page 1 - notes and panels
+- file: docs/Example page 2 -dropdowns and tabs
