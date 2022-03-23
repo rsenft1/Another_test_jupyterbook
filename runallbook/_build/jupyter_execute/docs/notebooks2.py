@@ -64,6 +64,18 @@ print(var1)
 # In[4]:
 
 
+print(f"This is my greeting:{var1}")
+
+
+# In[5]:
+
+
+print(f"This is my greeting:{var1}")
+
+
+# In[6]:
+
+
 # Fixing random state for reproducibility
 np.random.seed(19680801)
 
