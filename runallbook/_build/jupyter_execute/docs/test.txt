@@ -1,0 +1,10 @@
+print("This is a test.")
+
+print(var1)
+
+print(f"This is a test. {var1}")
+
+print("Margin code")
+
+for ii in range(100):
+  print("This is a test.")
