@@ -6,4 +6,6 @@ root: docs/intro
 chapters:
 - file: docs/markdown
 - file: docs/notebooks
+- file: docs/notebooks2
+- file: docs/test
 - file: docs/runall
