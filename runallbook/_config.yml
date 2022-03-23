@@ -28,7 +28,7 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/rsenft/Another_test_jupyterbook  # Online location of your book
-  path_to_book: runallbook/docs  # Optional path to your book, relative to the repository root
+  path_to_book: runallbook  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 launch_buttons:
