@@ -1,4 +1,10 @@
-jupyter-book
+scikit-learn>=0.24
+pandas>=1
 matplotlib
-numpy
-ghp-import
+seaborn
+plotly
+jupyterlab
+notebook
+jupytext
+# temporary work-around for https://github.com/ipython/ipython/issues/12467
+IPython<8
