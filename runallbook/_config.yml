@@ -1,0 +1,100 @@
+#######################################################################################
+# A default configuration that will be loaded for all jupyter books
+# See the documentation for help and more options:
+# https://jupyterbook.org/customize/config.html
+
+#######################################################################################
+# Book settings
+title                       : RunAllBook  # The title of the book. Will be placed in the left navbar.
+author                      : RSenft  # The author of the book
+copyright                   : "2022"  # Copyright year to be placed in the footer
+logo                        : logo.png  # A path to the book logo
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/rsenft/Another_test_jupyterbook  # Online location of your book
+  path_to_book: runallbook/docs  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
+
+launch_buttons:
+  binderhub_url: "https://mybinder.org"
+#  colab_url: "https://colab.research.google.com" # Not working for now,
+#  because it needs .ipynb
+  thebe: true
+
+binder:
+  binderhub_url               : "https://mybinder.org"
+  text                        : "Launch binder"
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+
+# #######################################################################################
+# Interact link settings
+notebook_interface            : "notebook"
+# notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
+
+sphinx:
+  config:
+    nb_custom_formats:
+      .py:
+        - jupytext.reads
+        - fmt: py:percent
+    # Needed for plotly rendering:
+    # https://jupyterbook.org/interactive/interactive.html#plotly
+    html_js_files:
+      - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+
+#######################################################################################
+# Execution settings
+execute:
+  execute_notebooks           : cache
+  timeout                     : 300
+
+#######################################################################################
+# Parse and render settings
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - dollarmath
+    - linkify
+    - substitution
+
+#######################################################################################
+# HTML-specific settings
+html:
+  home_page_in_navbar         : false
+  use_edit_page_button        : true
+  use_repository_button       : true
+  use_issues_button           : true
+  favicon: _static/favicon.ico
+  comments:
+    hypothesis: true
+  extra_footer: |
+    <div>
+      <div class="mooc_add">
+       <a href="https://www.fun-mooc.fr/en/courses/machine-learning-python-scikit-learn">Join the full MOOC for better learning!</a>
+      </div>
+      Brought to you by
+      <a href="https://learninglab.inria.fr">Inria Learning Lab</a>,
+      <a href="https://scikit-learn.fondation-inria.fr">scikit-learn @ La Fondation Inria</a>,
+      <a href="https://www.inria-academy.fr/formation/scikit-learn-la-boite-a-outils-de-lapprentissage-automatique/">Inria Academy</a>,
+      with many thanks to the <a href="https://scikit-learn.org">scikit-learn</a> community as a whole!
+    </div>
